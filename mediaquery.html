@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        div {
+            border: 1px black solid;
+            margin: 2px;
+        }
+
+        .container {
+            display: grid;
+            background-color: grey;
+            padding: 5px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .sidebar {
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+        .content {
+            height: 80vh;
+            padding: 10px;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .header,
+        .sidebar,
+        .content,
+        .footer,
+        .sidebar2 {
+            background-color: aquamarine;
+            margin: 2px;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr;
+                background-color: grey;
+                padding: 5px;
+            }
+
+            .header {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .sidebar {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            .content {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            .sidebar2 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .footer {
+                grid-column: 1/4;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .header {
+                grid-column: 1/5;
+            }
+            .sidebar {
+                grid-column: 1/2;
+            }
+            .content {
+                grid-column: 2/4;
+            }
+            .sidebar2 {
+                grid-column: 4/5;
+            }
+            .footer {
+                grid-column: 1/5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+                <li><a href="#">Link4</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum saepe magnam facere velit corrupti
+                repudiandae, esse minima. Alias beatae possimus laborum sint, dolor iste dicta laudantium vero cum nemo.
+            </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFz5fYgrepcP696Zm4ZtlldGLC6hEr83HUhDcUWJoyK2l-Rqp2YrkMskunDA_R5Hy-722xpQrOgG2-ZhAuOhuQ1aBRtwaf4jp3tfRNlNQKmg&s=10"
+                alt="" width="150px" height="150px">
+        </div>
+        <div class="sidebar2">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, unde omnis facilis harum doloremque
+                doloribus reprehenderit est in odit impedit fugit recusandae, quasi repudiandae! Rem dolor doloremque
+                dolorum officiis alias.</p>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
