@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Hello World!</h1>
+    <p id="test"></p>
+
+    <button onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript';">Click Me - H1</button>
+    <button onclick="document.getElementById('test').innerHTML = 'This is a paragraph.';">Click Me - P</button>
+    <button onclick="document.getElementById('demo').style.color = 'red';">Change Color</button>
+    <button onclick="document.getElementById('demo').style.backgroundColor = 'red';">Change Background Color</button>
+
+<hr>
+
+    <h1>Conditional Statements - switch</h1>
+    <h2 id="result"></h2>
+
+<hr>
+    <h1>Loops - for</h1>
+    <h2 id="loop-result"></h2>
+
+    <script>
+        //document.getElementById("demo").innerHTML = "Hello JavaScript";
+        //document.getElementById("test").innerHTML = "This is a paragraph.";
+
+        let pass = 5;
+        let name = "John";
+        let isTrue = true;
+        var y = 10;
+        const z = 15;
+
+        //using comparison operator and logical operator
+        if(pass == 5 && name == "John") { //(T)&&(T) = T
+            console.log("You are logged in");
+        }else{
+            console.log("You are not logged in");
+        }
+
+        name = "Jane";
+        switch(name) {
+            case "John":
+                document.getElementById("result").innerHTML = "Hello John";
+                break;
+            case "Jane":
+                document.getElementById("result").innerHTML = "Hello Jane";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Hello Guest";
+        }
+        
+
+        //ternary operator
+        let age = 17;
+        let canVote = (age >= 18) ? "You can vote" : "You cannot vote";
+        console.log(canVote);
+
+
+        //for loop
+        for(let i = 5; i > 0; i--) {
+            document.getElementById("loop-result").innerHTML += i + "<br>";
+        }
+
+        //5
+        //4
+        //3
+        //2
+        //1
+
+    </script>
+</body>
+</html>
